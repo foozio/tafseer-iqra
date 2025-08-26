@@ -221,6 +221,67 @@ All colors MUST be HSL.
     word-spacing: 0.1em;
   }
 
+  /* Tafseer text styling with Uthmani Naskh fonts */
+  .tafseer-text {
+    font-family: 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    text-align: justify;
+    direction: ltr;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    word-spacing: 0.05em;
+    color: hsl(var(--islamic-text));
+    margin-bottom: 1rem;
+  }
+
+  /* Arabic tafseer text with RTL support */
+  .tafseer-arabic {
+    font-family: 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif;
+    font-size: 1.25rem;
+    line-height: 2;
+    text-align: right;
+    direction: rtl;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    word-spacing: 0.08em;
+    color: hsl(var(--islamic-text));
+    margin-bottom: 1rem;
+  }
+
+  /* Tafseer source and metadata styling */
+  .tafseer-meta {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: hsl(var(--islamic-text-light));
+    margin-bottom: 0.5rem;
+  }
+
+  /* Tafseer content container */
+  .tafseer-container {
+    background: hsl(var(--islamic-cream));
+    border-left: 4px solid hsl(var(--islamic-green));
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  /* Dark mode adjustments for tafseer */
+  .dark .tafseer-container {
+    background: hsl(var(--muted));
+    border-left-color: hsl(var(--islamic-green));
+  }
+
+  .dark .tafseer-text,
+  .dark .tafseer-arabic {
+    color: hsl(var(--islamic-text));
+  }
+
+  .dark .tafseer-meta {
+    color: hsl(var(--islamic-text-light));
+  }
+
   /* Islamic decorative elements */
   .islamic-pattern {
     background-image: 

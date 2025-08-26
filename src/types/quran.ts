@@ -43,10 +43,18 @@ export interface TafseerResponse {
   };
 }
 
+export interface TafseerSource {
+  id: number;
+  name: string;
+  author_name: string;
+  language_name: string;
+}
+
 export interface SearchResult {
   surah: number;
   ayah: number;
   text: string;
   translation?: string;
   tafseer?: string;
+  tafseerSource?: TafseerSource;
 }

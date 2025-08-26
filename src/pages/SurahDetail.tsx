@@ -8,11 +8,19 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { quranApi } from '@/services/quranApi';
 import { SURAHS } from '@/data/surahs';
 
+interface TafseerSource {
+  id: number;
+  name: string;
+  author_name: string;
+  language_name: string;
+}
+
 interface Ayah {
   number: number;
   text: string;
   translation?: string;
   tafseer?: string;
+  tafseerSource?: TafseerSource;
 }
 
 interface SurahData {
@@ -222,11 +230,64 @@ const SurahDetail = () => {
                   
                   {/* Tafseer */}
                   {ayah.tafseer && (
-                    <div className="border-t pt-4">
-                      <h4 className="font-semibold text-sm text-gray-600 dark:text-gray-400 mb-2">Tafseer:</h4>
-                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+                    <div className="tafseer-container">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="tafseer-meta font-semibold">Tafseer:</h4>
+                        {ayah.tafseerSource && (
+                          <div className="flex items-center gap-2">
+                            <Badge variant="secondary" className="text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">
+                              {ayah.tafseerSource.name}
+                            </Badge>
+                            {ayah.tafseerSource.author_name && (
+                              <span className="tafseer-meta italic">
+                                by {ayah.tafseerSource.author_name}
+                              </span>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                      <p className="tafseer-text">
                         {ayah.tafseer}
                       </p>
+                      
+                      {/* Additional Tafseer Data */}
+                      {(ayah as any).tafseerFullData && (
+                        <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
+                          <h5 className="tafseer-meta font-medium mb-2">Additional Tafseer Information:</h5>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+                            {(ayah as any).tafseerFullData.ayah_key && (
+                              <div>
+                                <span className="tafseer-meta font-medium">Ayah Key:</span>
+                                <span className="ml-2 tafseer-text text-xs">{(ayah as any).tafseerFullData.ayah_key}</span>
+                              </div>
+                            )}
+                            {(ayah as any).tafseerFullData.surah && (
+                              <div>
+                                <span className="tafseer-meta font-medium">Surah Info:</span>
+                                <span className="ml-2 tafseer-text text-xs">
+                                  {(ayah as any).tafseerFullData.surah.english_name} ({(ayah as any).tafseerFullData.surah.revelation_place})
+                                </span>
+                              </div>
+                            )}
+                            {(ayah as any).tafseerFullData.tafseer && (
+                              <div className="md:col-span-2">
+                                <span className="tafseer-meta font-medium">Tafseer Details:</span>
+                                <div className="ml-2 tafseer-text text-xs">
+                                  <div>Name: {(ayah as any).tafseerFullData.tafseer.name}</div>
+                                  <div>Author: {(ayah as any).tafseerFullData.tafseer.author_name}</div>
+                                  <div>Language: {(ayah as any).tafseerFullData.tafseer.language_name}</div>
+                                </div>
+                              </div>
+                            )}
+                            {(ayah as any).tafseerFullData.status && (
+                              <div>
+                                <span className="tafseer-meta font-medium">API Status:</span>
+                                <span className="ml-2 tafseer-text text-xs">{(ayah as any).tafseerFullData.status}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </CardContent>
