@@ -115,7 +115,7 @@ The application uses Supabase with the following main tables:
 ### Main Contributor
 - **Nuzli L. Hernawan** - [@foozio](https://github.com/foozio)
   - Project Creator & Lead Developer
-  - Full-snack development and architecture
+  - Full-stack development and architecture
 
 ### How to Contribute
 
