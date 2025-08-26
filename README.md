@@ -115,7 +115,7 @@ The application uses Supabase with the following main tables:
 ### Main Contributor
 - **Nuzli L. Hernawan** - [@foozio](https://github.com/foozio)
   - Project Creator & Lead Developer
-  - Full-stack development and architecture
+  - Full-snack development and architecture
 
 ### How to Contribute
 
@@ -132,7 +132,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Quran data provided by [AlQuran Cloud API](https://alquran.cloud/)
-- Tafseer content from [Quran Tafseer API](https://quran-tafseer.com/)
+- Tafseer content from [Quran Tafseer API](https://api.quran-tafseer.com/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
 - Icons from [Lucide](https://lucide.dev/)
 
