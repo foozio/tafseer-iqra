@@ -60,7 +60,7 @@ export const getSurah = async (surahNumber: number) => {
 
     // Combine the data
     const combinedAyahs = arabicData.ayahs.map((ayah: any, index: number) => ({
-      number: ayah.number,
+      number: ayah.numberInSurah,
       text: ayah.text,
       translation: translationData.ayahs[index]?.text || '',
       tafseer: tafseerData[index] || ''
