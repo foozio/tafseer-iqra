@@ -24,9 +24,8 @@ export const testEndpointFallback = async () => {
     const endTime = Date.now();
     
     console.log(`✅ Success! Response time: ${endTime - startTime}ms`);
-    console.log(`📡 API Source: ${result.apiSource || 'Unknown'}`);
-    console.log(`📝 Text preview: ${result.text.substring(0, 100)}...`);
-    console.log(`🏷️  Source: ${result.source?.name || 'Unknown'}`);
+    console.log(`📡 Result: ${JSON.stringify(result).substring(0, 100)}...`);
+    console.log(`📝 Response received successfully`);
     
     return { success: true, result, responseTime: endTime - startTime };
   } catch (error) {

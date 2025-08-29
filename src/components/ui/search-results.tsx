@@ -225,4 +225,3 @@ const SearchResults = React.forwardRef<HTMLDivElement, SearchResultsProps>(
 SearchResults.displayName = "SearchResults";
 
 export { SearchResults };
-export type { SearchResult };

@@ -1,7 +1,7 @@
-/* Import Google Fonts - Enhanced for Quran rendering with Amiri Quran */
-@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import Google Fonts - Enhanced for Quran rendering with Thaha Naskh */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Import specialized Quranic fonts */
+/* Import Thaha Naskh Font from King Fahd Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -151,9 +151,9 @@ All colors MUST be HSL.
     font-family: 'Inter', 'Noto Sans Arabic', 'Amiri', system-ui, sans-serif;
   }
 
-  /* Enhanced Arabic text styling for Quran with Amiri Quran */
+  /* Enhanced Arabic text styling for Quran with Thaha Naskh */
   .arabic-text {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', 'Scheherazade New', 'Noto Naskh Arabic', 'Amiri', 'Noto Sans Arabic', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', 'Noto Sans Arabic', serif;
     font-size: 1.5rem;
     line-height: 2.2;
     text-align: right;
@@ -163,9 +163,9 @@ All colors MUST be HSL.
     word-spacing: 0.1em;
   }
 
-  /* Quranic verse text - optimized for readability with Amiri Quran */
+  /* Quranic verse text - optimized for readability with Thaha Naskh */
   .quran-text {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', serif;
     font-size: 1.75rem;
     line-height: 2.5;
     text-align: right;
@@ -176,17 +176,17 @@ All colors MUST be HSL.
     color: hsl(var(--islamic-text));
   }
 
-  /* Surah names - elegant Arabic typography with Amiri Quran */
+  /* Surah names - elegant Arabic typography with Thaha Naskh */
   .surah-name {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', 'Scheherazade New', 'Amiri', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', serif;
     font-weight: 400;
     letter-spacing: 0.02em;
     word-spacing: 0.1em;
   }
 
-  /* Arabic headings with Amiri Quran */
+  /* Arabic headings with Thaha Naskh */
   .arabic-heading {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', 'Scheherazade New', 'Amiri', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', serif;
     font-weight: 400;
     letter-spacing: 0.01em;
     word-spacing: 0.08em;
@@ -194,14 +194,14 @@ All colors MUST be HSL.
 
   /* Small Arabic text (ayah numbers, etc.) */
   .arabic-small {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', 'Noto Sans Arabic', 'Scheherazade New', sans-serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Noto Sans Arabic', 'Scheherazade New', sans-serif;
     font-weight: 400;
     letter-spacing: 0.01em;
   }
 
-  /* Amiri Quran specific styling */
-  .kfgqpc-text {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', serif;
+  /* Thaha Naskh specific styling */
+  .thaha-text {
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', serif;
     font-weight: 400;
     text-align: right;
     direction: rtl;
@@ -212,7 +212,7 @@ All colors MUST be HSL.
 
   /* Font Arabic class for Arabic text */
   .font-arabic {
-    font-family: 'Amiri Quran', 'KFGQPC Uthmanic Script HAFS', 'Scheherazade New', 'Noto Naskh Arabic', 'Amiri', 'Noto Sans Arabic', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', 'Noto Sans Arabic', serif;
     font-weight: 400;
     text-align: right;
     direction: rtl;
@@ -221,9 +221,9 @@ All colors MUST be HSL.
     word-spacing: 0.1em;
   }
 
-  /* Tafseer text styling with Uthmani Naskh fonts */
+  /* Tafseer text styling with Thaha Naskh fonts */
   .tafseer-text {
-    font-family: 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif;
     font-size: 1.125rem;
     line-height: 1.8;
     text-align: justify;
@@ -237,7 +237,7 @@ All colors MUST be HSL.
 
   /* Arabic tafseer text with RTL support */
   .tafseer-arabic {
-    font-family: 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif;
+    font-family: 'Thaha Naskh', 'Noto Naskh Arabic', 'Amiri', 'Scheherazade New', serif;
     font-size: 1.25rem;
     line-height: 2;
     text-align: right;
